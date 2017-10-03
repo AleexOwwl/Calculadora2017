@@ -1,13 +1,13 @@
-lenguage: python
+language: python
 python:
-	-"2.7"
+  - "2.7"
 
-install:
+install: 
   "pip install -r requerimientos.txt"
 
-before_script:
+before_script: 
   - autopep8 -ir *
-  - flake8 --max-complexity=5 --exclude=*.txt,*.md *
+  - flake8 --max-complexity=8 --exclude=*.txt,*.md,*.pyc *
 
-script:
-  - python CalculadoraTest.py
+script: 
+   - python CalculadoraTest.py
